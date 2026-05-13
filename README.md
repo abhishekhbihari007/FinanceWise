@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# FinanceWise - Expense Tracking App
 
-# Run and deploy your AI Studio app
+A clean and modern expense tracking web app built with React and Vite.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/fdad53cc-51fd-4dd8-a2d2-9be9ab662def
+- Add expenses with name, amount, and category
+- View total spending and category-wise breakdown
+- Live currency conversion using the [Frankfurter API](https://www.frankfurter.app/)
+- Data saved locally in the browser (no backend needed)
+- Fully responsive design
+
+## Tech Stack
+
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Frankfurter API (live exchange rates)
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+```bash
+npm install
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Developer
+
+Made by **Abhishekh Bihari**
