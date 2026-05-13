@@ -1,6 +1,6 @@
 import { CurrencyRates } from '../types';
 
-const BASE_URL = 'https://api.frankfurter.app/latest';
+const BASE_URL = 'https://api.frankfurter.dev/v1/latest';
 
 export async function fetchLatestRates(base: string = 'USD'): Promise<CurrencyRates> {
   try {
@@ -13,12 +13,8 @@ export async function fetchLatestRates(base: string = 'USD'): Promise<CurrencyRa
     
     return data.rates;
   } catch (error) {
-    if (error instanceof TypeError && error.message === 'Failed to fetch') {
-      console.error('Network Error: The API might be blocked by browser settings or CORS policies.');
-      throw new Error('Network connection issue. Please check your internet or try again later.');
-    }
     console.error('Currency API Error:', error);
-    throw error;
+    throw new Error('Unable to fetch exchange rates. Please try again.');
   }
 }
 
